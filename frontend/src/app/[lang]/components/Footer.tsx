@@ -14,13 +14,13 @@ interface FooterLink {
   social?: string;
 }
 
-interface CategoryLink {
-  id: string;
-  attributes: {
-    name: string;
-    slug: string;
-  };
-}
+// interface CategoryLink {
+//   id: string;
+//   attributes: {
+//     name: string;
+//     slug: string;
+//   };
+// }
 
 function FooterLink({ url, text }: FooterLink) {
   const path = usePathname();
@@ -38,18 +38,18 @@ function FooterLink({ url, text }: FooterLink) {
   );
 }
 
-function CategoryLink({ attributes }: CategoryLink) {
-  return (
-    <li className="flex">
-      <Link
-        href={`/blog/${attributes.slug}`}
-        className="hover:dark:text-violet-400"
-      >
-        {attributes.name}
-      </Link>
-    </li>
-  );
-}
+// function CategoryLink({ attributes }: CategoryLink) {
+//   return (
+//     <li className="flex">
+//       <Link
+//         href={`/blog/${attributes.slug}`}
+//         className="hover:dark:text-violet-400"
+//       >
+//         {attributes.name}
+//       </Link>
+//     </li>
+//   );
+// }
 
 function RenderSocialIcon({ social }: { social: string | undefined }) {
   switch (social) {
@@ -70,14 +70,14 @@ export default function Footer({
   logoUrl,
   logoText,
   menuLinks,
-  categoryLinks,
+  //categoryLinks,
   legalLinks,
   socialLinks,
 }: {
   logoUrl: string | null;
   logoText: string | null;
   menuLinks: Array<FooterLink>;
-  categoryLinks: Array<CategoryLink>;
+  //categoryLinks: Array<CategoryLink>;
   legalLinks: Array<FooterLink>;
   socialLinks: Array<FooterLink>;
 }) {
@@ -92,14 +92,14 @@ export default function Footer({
             </Logo>
           </div>
 
-          <div className="col-span-6 text-center md:text-left md:col-span-3">
+          {/* <div className="col-span-6 text-center md:text-left md:col-span-3">
             <p className="pb-1 text-lg font-medium">Categories</p>
             <ul>
               {categoryLinks.map((link: CategoryLink) => (
                 <CategoryLink key={link.id} {...link} />
               ))}
             </ul>
-          </div>
+          </div> */}
 
           <div className="col-span-6 text-center md:text-left md:col-span-3">
             <p className="pb-1 text-lg font-medium">Menu</p>

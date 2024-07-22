@@ -139,11 +139,6 @@ export interface LayoutFooter extends Schema.Component {
     menuLinks: Attribute.Component<'links.link', true>;
     legalLinks: Attribute.Component<'links.link', true>;
     socialLinks: Attribute.Component<'links.social-link', true>;
-    categories: Attribute.Relation<
-      'layout.footer',
-      'oneToMany',
-      'api::category.category'
-    >;
   };
 }
 
@@ -351,7 +346,6 @@ export interface SectionsLeadForm extends Schema.Component {
   };
   attributes: {
     title: Attribute.String;
-    emailPlaceholder: Attribute.String;
     submitButton: Attribute.Component<'links.button'>;
     location: Attribute.String;
     description: Attribute.Text;

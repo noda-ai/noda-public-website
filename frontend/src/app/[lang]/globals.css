@@ -134,3 +134,14 @@ body {
 .react-slideshow-container [aria-label="Next Slide"] {
   margin-right: 1rem;
 }
+
+/******************************************* 
+  Links
+*******************************************/   
+a:hover {
+  text-decoration: underline;
+}
+
+button:hover {
+  text-decoration: underline;
+}
